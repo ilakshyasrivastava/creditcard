@@ -54,13 +54,13 @@ h6{
     font-weight: 400;
 }
 
-h5 .number{
+h5.number{
     margin-top: 4px;
     font-size: 18px;
     letter-spacing: 1px;
 }
 
-h5 .name{
+h5.name{
     margin-top: 20px;
 }
 
