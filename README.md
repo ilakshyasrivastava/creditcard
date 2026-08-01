@@ -11,7 +11,7 @@ https://ilakshyasrivastava.github.io/creditcard/
 
 ## 📸 Preview
 
-<img src="./assets/preview.png" width="100%" />
+<img src="./assets/creditcard.png" width="100%" />
 
 ---
 
