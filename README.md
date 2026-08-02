@@ -12,7 +12,7 @@ https://ilakshyasrivastava.github.io/creditcard/
 ## 📸 Preview
 
 
-![Preview](images/creditcard.png)
+![Preview](images/screenshot.png)
 
 
 ---
