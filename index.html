@@ -1,34 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Credit Card Ui Design</title>
-</head>
-<body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="style.css">  
+    <title>Credit Card Ui Design</title>  
+</head>  
+<body>  
 
-    <div class="container">
-         <header>
-        <span class="logo">
-            <img src="images/logo.png" alt="" />
-            <h5>Master card</h5>
-        </span>
-        <img src="images/chip.png" alt="" class="chip">
-    </header>
+    <!-- Main Outer Wrapper -->
+    <div class="card-wrapper">  
+        <div class="container">  
+            
+            <!-- Front Side -->
+            <div class="card-side card-front">
+                <header>  
+                    <span class="logo">  
+                        <img src="images/logo.png" alt="" />  
+                        <h5>Master card</h5>  
+                    </span>  
+                    <img src="images/chip.png" alt="" class="chip">  
+                </header>  
 
-    <div class="card-details">
-        <div class="name-number">
-            <h6>Card Number</h6>
-            <h5 class="number">8050 5040 2030 3020</h5>
-            <h5 class="name">Lakshya</h5>
-        </div>
-        <div class="valid-date">
-            <h6>Valid Thru</h6>
-            <h5>05/28</h5>
-        </div>
-    </div>
-    </div>
+                <div class="card-details">  
+                    <div class="name-number">  
+                        <h6>Card Number</h6>  
+                        <h5 class="number">8050 5040 2030 3020</h5>  
+                        <h5 class="name">Lakshya</h5>  
+                    </div>  
+                    <div class="valid-date">  
+                        <h6>Valid Thru</h6>  
+                        <h5>05/28</h5>  
+                    </div>  
+                </div>  
+            </div>
+
+           <!-- Back Side -->
+<div class="card-side card-back">
+    <div class="black-stripe"></div>
     
-</body>
+    <div class="cvv-container">
+        <h6>CVV</h6>
+        <div class="cvv-box">
+            <span>805</span>
+        </div>
+    </div>
+
+    <div class="back-content">
+        <div class="signature-text">
+            <p>Authorized Signature • Not Valid Unless Signed</p>
+        </div>
+        
+        <div class="terms">
+            <p>This card is property of Bank. If found, please return to any branch or call Customer Support at 1800-123-4567.</p>
+        </div>
+
+        <div class="back-footer">
+            <div class="hologram"></div>
+            <div class="back-logo">
+                <img src="images/logo.png" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+</body>  
 </html>

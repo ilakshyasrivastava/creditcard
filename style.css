@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -13,32 +13,61 @@ body{
     background: #e3f2fd;
 }
 
-.container{
-    position: relative;
-    background-image: url("images/bg.png");
-    background-size: cover;
-    padding: 25px;
-    border-radius: 28px;
+/* Outer Wrapper 3D Perspective ke liye */
+.card-wrapper {
+    perspective: 1000px;
     max-width: 380px;
     width: 100%;
+    height: 240px;
+}
+
+/* Main Container Jo Flip Hoga */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* Hover karne par Card Rotate hoga */
+.card-wrapper:hover .container {
+    transform: rotateY(180deg);
+}
+
+/* Dono Sides ki Common Styling */
+.card-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    background-image: url("images/bg.png");
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden; /* Peechhe ka hissa chhupane ke liye */
+}
+
+/* Front Side Styling */
+.card-front {
+    padding: 25px;
 }
 
 header, .logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
-.logo img{
+.logo img {
     width: 48px;
     margin-right: 10px;
 }
 
-
-h5{
+h5 {
     font-size: 16px;
     font-weight: 400;
     color: #fff;
@@ -48,26 +77,104 @@ header .chip {
     width: 60px;
 }
 
-h6{
+h6 {
     color: #fff;
     font-size: 12px;
     font-weight: 400;
 }
 
-h5.number{
+h5.number {
     margin-top: 4px;
     font-size: 18px;
     letter-spacing: 1px;
 }
 
-h5.name{
+h5.name {
     margin-top: 20px;
 }
 
-
-.container .card-details{
+.card-front .card-details {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+/* Back Side Styling */
+.card-back {
+    transform: rotateY(180deg);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.black-stripe {
+    width: 100%;
+    height: 40px;
+    background: #111;
+}
+
+.cvv-container {
+    padding: 10px 25px 0 25px;
+    text-align: right;
+}
+
+.cvv-box {
+    width: 100%;
+    height: 35px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+}
+
+.cvv-box span {
+    color: #111;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.back-content {
+    padding: 10px 25px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signature-text p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+
+.terms p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 8px;
+    line-height: 1.2;
+}
+
+.back-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+/* Metallic Hologram Effect */
+.hologram {
+    width: 40px;
+    height: 25px;
+    background: linear-gradient(135deg, #e6c875, #ffd700, #fff, #c0c0c0, #e6c875);
+    border-radius: 4px;
+    opacity: 0.85;
+}
+
+.back-logo img {
+    width: 36px;
+    opacity: 0.9;
 }
